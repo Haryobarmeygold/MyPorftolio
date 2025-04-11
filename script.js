@@ -66,9 +66,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if(link.getAttribute('href') === `#${current}`) {
+            if(link.getAttribute('href') === `#${current}` || 
+               (link.closest('.dropdown') && link.getAttribute('href') === `#${current}`)) {
                 link.classList.add('active');
             }
         });
+
+        // Handle dropdown toggle highlight
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        if (current === 'skills') {
+            dropdownToggle.classList.add('active');
+        } else {
+            dropdownToggle.classList.remove('active');
+        }
     });
 });
