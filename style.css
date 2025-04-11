@@ -63,6 +63,37 @@ nav {
     color: #64ffda;
 }
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: rgba(10, 25, 47, 0.9);
+    padding: 1rem;
+    border-radius: 4px;
+    list-style: none;
+    min-width: 150px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.dropdown-menu i {
+    font-size: 1.2rem;
+}
+
 section {
     padding: 5rem 2rem 5rem calc(250px + 2rem);
     min-height: 100vh;
