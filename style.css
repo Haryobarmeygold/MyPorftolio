@@ -196,13 +196,14 @@ h2 {
 .about-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     gap: 4rem;
     align-items: center;
 }
 
 .about-text {
-    flex: 1;
+    padding-right: 2rem;
 }
 
 .about-text p {
@@ -212,8 +213,9 @@ h2 {
 }
 
 .profile-picture {
-    flex: 0 0 400px;
     position: relative;
+    max-width: 400px;
+    justify-self: center;
 }
 
 .profile-picture img {
