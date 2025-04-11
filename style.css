@@ -178,9 +178,60 @@ h2 {
     background-color: rgba(100, 255, 218, 0.1);
 }
 
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.section-line {
+    height: 1px;
+    background-color: #64ffda;
+    flex: 1;
+    max-width: 300px;
+}
+
 .about-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.profile-picture {
+    flex: 0 0 400px;
+    position: relative;
+}
+
+.profile-picture img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #64ffda;
+}
+
+.profile-picture::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: -15px;
+    bottom: -15px;
+    border: 2px solid #64ffda;
+    border-radius: 10px;
+    z-index: -1;
 }
 
 .skills {
