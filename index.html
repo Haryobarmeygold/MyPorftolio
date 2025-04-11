@@ -1,16 +1,85 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Developer Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">GD</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <section id="home">
+        <div class="hero">
+            <h1>Game Developer</h1>
+            <p>Crafting Interactive Experiences</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I'm a passionate game developer with experience in Unity and Unreal Engine. I focus on creating engaging gameplay mechanics and immersive experiences.</p>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unreal Engine</li>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>Game Design</li>
+                    <li>3D Modeling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://placekitten.com/400/250" alt="Game 1">
+                <h3>Adventure Quest</h3>
+                <p>A 3D action-adventure game built in Unity</p>
+            </div>
+            <div class="project-card">
+                <img src="https://placekitten.com/400/251" alt="Game 2">
+                <h3>Space Explorer</h3>
+                <p>An open-world space exploration game</p>
+            </div>
+            <div class="project-card">
+                <img src="https://placekitten.com/400/252" alt="Game 3">
+                <h3>Puzzle Master</h3>
+                <p>A challenging puzzle game with unique mechanics</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>Email: your.email@example.com</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>
