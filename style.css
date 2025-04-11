@@ -113,18 +113,42 @@ h2 {
     margin-top: 2rem;
 }
 
-.skills ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    list-style: none;
+.skills-container {
+    overflow: hidden;
+    padding: 2rem 0;
 }
 
-.skills li {
+.skills-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    animation: scrollSkills 30s linear infinite;
+}
+
+.skill {
     background-color: rgba(100, 255, 218, 0.1);
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     border-radius: 4px;
     text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    background-color: rgba(100, 255, 218, 0.2);
+}
+
+@keyframes scrollSkills {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.skills-track:hover {
+    animation-play-state: paused;
 }
 
 .projects-grid {
