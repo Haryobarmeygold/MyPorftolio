@@ -203,15 +203,16 @@ h2 {
 }
 
 .skills-track-1 {
-    animation: scrollSkillsRight 60s linear infinite;
+    animation: scrollSkillsLeft 20s linear infinite;
 }
 
 .skills-track-2 {
-    animation: scrollSkillsLeft 60s linear infinite;
+    /* Static middle row */
+    justify-content: center;
 }
 
 .skills-track-3 {
-    animation: scrollSkillsRight 60s linear infinite;
+    animation: scrollSkillsRight 20s linear infinite;
 }
 
 .skill {
@@ -229,19 +230,19 @@ h2 {
 
 @keyframes scrollSkillsRight {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(100%);
     }
 }
 
 @keyframes scrollSkillsLeft {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(100%);
+        transform: translateX(-100%);
     }
 }
 
