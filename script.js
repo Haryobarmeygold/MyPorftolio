@@ -49,6 +49,22 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() {
     if(textArray.length) setTimeout(type, newTextDelay + 250);
     
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Set initial theme
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-theme');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        localStorage.setItem('theme', 
+            document.body.classList.contains('light-theme') ? 'light' : 'dark'
+        );
+    });
+    
     // Scroll highlighting
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
