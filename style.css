@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -119,10 +118,10 @@ h2 {
 }
 
 .skills-track {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 1rem;
     animation: scrollSkills 30s linear infinite;
+    white-space: nowrap;
 }
 
 .skill {
@@ -140,10 +139,10 @@ h2 {
 
 @keyframes scrollSkills {
     0% {
-        transform: translateY(0);
+        transform: translateX(100%);
     }
     100% {
-        transform: translateY(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -191,6 +190,8 @@ h2 {
 
 .social-links {
     margin: 2rem 0;
+    display: flex;
+    justify-content: center; /* Center the icons */
 }
 
 .social-links a {
@@ -204,12 +205,27 @@ h2 {
     color: #64ffda;
 }
 
+.social-links a i { /* Style the icons */
+    transition: color 0.3s;
+}
+
+.social-links a i:hover {
+    color: #64ffda;
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 3rem;
     }
-    
+
     .nav-links {
         gap: 1rem;
+    }
+    .social-links {
+        flex-direction: column; /* Stack icons vertically on smaller screens */
+        align-items: center; /* Center icons vertically */
+    }
+    .social-links a {
+        margin: 0.5rem 0; /* Adjust spacing between icons */
     }
 }
