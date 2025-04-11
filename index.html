@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +39,7 @@
             <div class="skills">
                 <h3>Skills</h3>
                 <div class="skills-container">
-                    <div class="skills-track">
+                <div class="skills-track skills-track-1">
                         <div class="skill">Unreal Engine</div>
                         <div class="skill">Unity</div>
                         <div class="skill">C#</div>
@@ -55,9 +54,24 @@
                         <div class="skill">Networking</div>
                         <div class="skill">Character Animation</div>
                     </div>
+                <div class="skills-track skills-track-2">
+                    <div class="skill">Unreal Engine</div>
+                    <div class="skill">Unity</div>
+                    <div class="skill">C#</div>
+                    <div class="skill">C++</div>
+                    <div class="skill">Visual Studio</div>
+                    <div class="skill">GitHub</div>
+                    <div class="skill">Game Development</div>
+                    <div class="skill">Game Programming</div>
+                    <div class="skill">Object-Oriented Programming</div>
+                    <div class="skill">Game Physics</div>
+                    <div class="skill">AI Programming</div>
+                    <div class="skill">Networking</div>
+                    <div class="skill">Character Animation</div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <section id="projects">
@@ -84,19 +98,21 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="contact-content">
-            <div class="social-links">
-                <h3>Let's Connect</h3>
-                <div class="social-icons">
-                    <a href="https://github.com/YourGithub" target="_blank" class="social-icon">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com/in/YourLinkedIn" target="_blank" class="social-icon">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                </div>
-            </div>
+            <form class="contact-form" action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="social-sidebar">
+            <a href="https://github.com/YourGithub" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/YourLinkedIn" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </div>
     </section>
 

@@ -115,13 +115,23 @@ h2 {
 .skills-container {
     overflow: hidden;
     padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .skills-track {
     display: flex;
     gap: 1rem;
-    animation: scrollSkills 30s linear infinite;
     white-space: nowrap;
+}
+
+.skills-track-1 {
+    animation: scrollSkillsRight 30s linear infinite;
+}
+
+.skills-track-2 {
+    animation: scrollSkillsLeft 30s linear infinite;
 }
 
 .skill {
@@ -137,13 +147,80 @@ h2 {
     background-color: rgba(100, 255, 218, 0.2);
 }
 
-@keyframes scrollSkills {
+@keyframes scrollSkillsRight {
     0% {
         transform: translateX(100%);
     }
     100% {
         transform: translateX(-100%);
     }
+}
+
+@keyframes scrollSkillsLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #64ffda;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background: transparent;
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-form button:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+.social-sidebar {
+    position: fixed;
+    right: 2rem;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.social-sidebar::after {
+    content: '';
+    width: 1px;
+    height: 90px;
+    background-color: #64ffda;
+}
+
+.social-sidebar a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.social-sidebar a:hover {
+    color: #64ffda;
+    transform: translateY(-3px);
 }
 
 .skills-track:hover {
